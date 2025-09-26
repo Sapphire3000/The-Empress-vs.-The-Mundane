@@ -1,0 +1,113 @@
+/* General Page Styles */
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Kapakana', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Navbar */
+.navbar ul {
+  list-style: none;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: black;
+  margin: 0;
+}
+
+.navbar a {
+  font-family: 'DisplayFairFont', serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: gold;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Page Title */
+.page-title {
+  font-family: 'Fleur De Leah', cursive;
+  color: gold;
+  margin: 30px 0;
+  font-size: 50px;
+}
+
+/* Wall of Stars Grid */
+.wall-of-stars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns for row2 */
+  gap: 25px;
+  justify-items: center;
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Row 1: center the single star */
+.row1 {
+  grid-template-columns: 1fr;
+}
+
+/* Row 2: three stars evenly spaced */
+.row2 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Star container */
+.star-container {
+  display: inline-block;
+  position: relative;
+}
+
+/* Stars */
+.star {
+  font-size: 3rem;
+  cursor: pointer;
+  transition: transform 0.2s, color 0.3s;
+  color: gold;
+}
+
+.star:hover {
+  transform: scale(1.4);
+  color: #ffd700cc;
+}
+
+/* Note Display Box */
+#note-display {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+  background-color: #111;
+  border: 2px solid gold;
+  border-radius: 15px;
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #fff;
+  text-align: left;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+/* Hidden state for note */
+#note-display.hidden {
+  display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .star {
+    font-size: 2.5rem;
+  }
+  #note-display {
+    font-size: 16px;
+    padding: 15px;
+  }
+}

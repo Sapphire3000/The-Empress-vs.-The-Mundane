@@ -1,0 +1,80 @@
+body{
+margin:0;
+padding:0;
+background: black;
+}
+
+nav{
+margin:0;
+width:100%;
+padding:20px 0;
+background-color: black;
+box-sizing: border-box;
+}
+
+li a{
+text-align: center;
+text-decoration: none;
+color:#F4C500;
+font-weight: bold;
+
+}
+
+
+ul{
+justify-content:center;
+display:flex;
+list-style: none;
+flex-direction:row;
+text-align:center;
+padding:0;
+margin:0;
+font-size: 18px;
+font-family: playfair display;
+
+gap:30px;
+}
+
+.name1{
+  font-family: "Mea Culpa", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color:#F8DE22;
+  font-size: 70px;
+  text-align: center;
+  transition: transform 0.8s ease-in-out;
+  
+}
+.name1:hover{
+transform: scale(1.2);
+color: #FFD700;
+}
+
+.name2{
+font-family:roman;
+font-weight:400;
+text-align: center;
+font-size:30px;
+color:white;
+transition: transform 0.8s ease-in-out;
+}
+
+.name2:hover{
+transform: scale(1.2);
+color:#F3F8FF;
+}
+
+.name3{
+font-family:roman;
+font-weight:400;
+text-align: center;
+font-size:45px;
+color:#FF1E1E;
+transition: transform 0.8s ease-in-out;
+}
+
+.name3:hover{
+transform: scale(1.2);
+color:red;
+
+}

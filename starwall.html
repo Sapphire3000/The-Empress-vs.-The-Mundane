@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wall Of Stars</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Kapakana:wght@300..400&family=Mea+Culpa&family=Playfair+Display&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="wall.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="letter">A Letter</a></li>
+      <li><a href="appointments">Appointments</a></li>
+      <li><a href="cosmos">Scream Into The Cosmos</a></li>
+      <li><a href="cosmos wall">Wall Of Stars</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Title -->
+  <h1 class="page-title"> Wall Of Stars </h1>
+
+  <!-- Row 1: Your Empress Star -->
+  <div class="wall-of-stars row1">
+    <div class="star-container">
+      <div class="star" data-name="Empress" onclick="toggleNote(this)">⭐</div>
+    </div>
+  </div>
+
+  <!-- Row 2: Three placeholder stars -->
+  <div class="wall-of-stars row2">
+    <div class="star-container">
+      <div class="star" data-name="ThisCouldBeYou" onclick="toggleNote(this)">⭐</div>
+    </div>
+    <div class="star-container">
+      <div class="star" data-name="DontBeAfraid" onclick="toggleNote(this)">⭐</div>
+    </div>
+    <div class="star-container">
+      <div class="star" data-name="Release" onclick="toggleNote(this)">⭐</div>
+    </div>
+  </div>
+
+  <!-- Note Display Box -->
+  <div id="note-display" class="hidden"></div>
+
+  <!-- Script for notes -->
+  <script>
+    function toggleNote(starElement) {
+      const noteDisplay = document.getElementById('note-display');
+      const name = starElement.dataset.name;
+
+      if (noteDisplay.dataset.current === name) {
+        noteDisplay.classList.add('hidden');
+        noteDisplay.dataset.current = '';
+        noteDisplay.innerHTML = '';
+        return;
+      }
+
+      let noteText = '';
+      switch(name) {
+        case "Empress":
+          noteText = `
+            Young Colleens, this is a long time coming. 
+            It took so long to upload this website. 
+            This is my third creation, my baby, and I’m so happy you get to see it. 
+            Please enjoy, bismillah.
+            <br><br>
+            — Empress
+          `;
+          break;
+        case "ThisCouldBeYou":
+          noteText = `This could be you. Write something, release it into the universe.`;
+          break;
+        case "DontBeAfraid":
+          noteText = `Don't be afraid. Let your words flow freely.`;
+          break;
+        case "Release":
+          noteText = `Release your thoughts and begin your journey to healing.`;
+          break;
+        default:
+          noteText = `No message yet.`;
+      }
+
+      noteDisplay.innerHTML = noteText;
+      noteDisplay.dataset.current = name;
+      noteDisplay.classList.remove('hidden');
+      noteDisplay.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  </script>
+
+</body>
+</html>
