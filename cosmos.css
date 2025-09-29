@@ -51,7 +51,7 @@ color: #FFD700;
 }
 
 .name2{
-font-family:playfair display;
+font-family:'playfair display',serif;
 font-weight:400;
 text-align: center;
 font-size:30px;
@@ -65,7 +65,7 @@ color:#F3F8FF;
 }
 
 .name3{
-font-family: playfair display;
+font-family: 'playfair display',serif;
 font-weight:375;
 text-align: center;
 font-size:40px;
