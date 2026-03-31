@@ -204,12 +204,9 @@ body {
 .twinkle-container span:nth-child(20) { top: 45%; left: 55%;  animation-delay: 5.3s; transform: scaleY(1.2) rotate(45deg); }
 .twinkle-container span:nth-child(21) { top: 60%; left: 75%;  animation-delay: 5.5s; transform: scaleY(1)   rotate(45deg); }
 
-
 .payment-item a {
-  text-decoration: none !important;
   color: #FFFFFF !important;
-  border-bottom: none !important;
-  box-shadow: none !important;
+  text-decoration: none !important;
 }
 
 .payment-item a:link,
