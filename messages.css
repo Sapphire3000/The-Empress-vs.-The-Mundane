@@ -209,11 +209,12 @@ body {
   text-decoration: none !important;
 }
 
+.payment-item a,
 .payment-item a:link,
 .payment-item a:visited,
 .payment-item a:hover,
 .payment-item a:active {
+  color: #FFFFFF !important;
   text-decoration: none !important;
-  border-bottom: none !important;
 }
 
