@@ -205,13 +205,14 @@ body {
 .twinkle-container span:nth-child(21) { top: 60%; left: 75%;  animation-delay: 5.5s; transform: scaleY(1)   rotate(45deg); }
 
 
-a[href^="tel"] {
-  color: white !important;
-  text-decoration: none;
+.payment-item a {
+  text-decoration: none !important;
+  color: #FFD786 !important;
 }
 
-a[href^="tel"]:visited,
-a[href^="tel"]:hover,
-a[href^="tel"]:active {
-  color: white !important;
+.payment-item a:link,
+.payment-item a:visited,
+.payment-item a:hover,
+.payment-item a:active {
+  text-decoration: none !important;
 }
