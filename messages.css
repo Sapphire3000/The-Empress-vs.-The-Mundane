@@ -204,3 +204,14 @@ body {
 .twinkle-container span:nth-child(20) { top: 45%; left: 55%;  animation-delay: 5.3s; transform: scaleY(1.2) rotate(45deg); }
 .twinkle-container span:nth-child(21) { top: 60%; left: 75%;  animation-delay: 5.5s; transform: scaleY(1)   rotate(45deg); }
 
+
+a[href^="tel"] {
+  color: white !important;
+  text-decoration: none;
+}
+
+a[href^="tel"]:visited,
+a[href^="tel"]:hover,
+a[href^="tel"]:active {
+  color: white !important;
+}
