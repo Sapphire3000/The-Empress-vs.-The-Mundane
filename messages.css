@@ -208,6 +208,8 @@ body {
 .payment-item a {
   text-decoration: none !important;
   color: #FFD786 !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
 }
 
 .payment-item a:link,
@@ -215,4 +217,6 @@ body {
 .payment-item a:hover,
 .payment-item a:active {
   text-decoration: none !important;
+  border-bottom: none !important;
 }
+
