@@ -411,4 +411,13 @@ h2 { text-align: center; }
   border: 0;
 }
 
+a[href^="tel"] {
+  color: white !important;
+  text-decoration: none;
+}
 
+a[href^="tel"]:visited,
+a[href^="tel"]:hover,
+a[href^="tel"]:active {
+  color: white !important;
+}
