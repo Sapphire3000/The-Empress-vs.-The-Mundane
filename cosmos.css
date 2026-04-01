@@ -4,16 +4,12 @@ padding:0;
 background:#010210;
 }
 
-
-
 li a{
 text-align: center;
 text-decoration: none;
 color:#010210;
 font-weight: bold;
-
 }
-
 
 ul{
 justify-content:center;
@@ -25,11 +21,10 @@ padding:0;
 margin:0;
 font-size: 18px;
 font-family: playfair display;
-
 gap:30px;
 }
 
-
+/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: center;
@@ -37,6 +32,8 @@ gap:30px;
   padding: 1rem;
   background-color:#010210;
   font-size: 15px;
+  position: relative;
+  z-index: 3;
 }
 
 .nav-links {
@@ -70,17 +67,22 @@ gap:30px;
   margin: 4px 0;
 }
 
-/* ============================= */
-/* MOBILE MENU */
-/* ============================= */
+/* MOBILE */
 @media screen and (max-width: 768px) {
   .hamburger { display: flex; }
-  .nav-links { display: none; flex-direction: column; gap: 1rem; top: 60px; right: 0; background-color: #010210; padding: 1rem; }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    top: 60px;
+    right: 0;
+    background-color: #010210;
+    padding: 1rem;
+  }
   .nav-links.nav-active { display: flex; }
 }
 
-
-
+/* TEXT */
 .name1{
   font-family: "Mea Culpa", cursive;
   font-weight: 400;
@@ -89,29 +91,37 @@ gap:30px;
   font-size: 65px;
   text-align: center;
   transition: transform 0.8s ease-in-out;
-    text-align: center;
   margin-top: 60px;
   position: relative;
-  z-index: 2;
-  background: linear-gradient(120deg,#b8892b 0%,#ffd77a 20%,#fff2c2 40%,#ffd77a 60%,#b8892b 80%,#b8892b 100%);
+  z-index: 3;
+
+  background: linear-gradient(
+    120deg,#b8892b 0%,#ffd77a 20%,#fff2c2 40%,#ffd77a 60%,#b8892b 80%,#b8892b 100%
+  );
+
   background-size: 400% 100%;
   background-position: 0% center;
+
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
+
   animation: shimmerFlow 14s linear infinite;
 }
 
-@keyframes shimmerFlow { from {background-position:0% center;} to {background-position:400% center;} }
-@keyframes shimmerFlowSoft { from {background-position:0% center;} to {background-position:300% center;} 
-
-}
-
-  
-}
 .name1:hover{
 transform: scale(1.2);
 color: #FFD700;
+}
+
+@keyframes shimmerFlow {
+  from {background-position:0% center;}
+  to {background-position:400% center;}
+}
+
+@keyframes shimmerFlowSoft {
+  from {background-position:0% center;}
+  to {background-position:300% center;}
 }
 
 .name2{
@@ -121,6 +131,8 @@ text-align: center;
 font-size:30px;
 color:white;
 transition: transform 0.8s ease-in-out;
+position: relative;
+z-index: 3;
 }
 
 .name2:hover{
@@ -133,25 +145,23 @@ font-family:roman;
 font-weight:400;
 text-align: center;
 font-size:40px;
-color:#FF1E1E;
+color:#C00707;
 position: relative;
-  z-index: 2;
+z-index: 3;
 transition: transform 0.8s ease-in-out;
-color: #C00707; 
-  text-shadow: 
-    0 0 2px #FF1E1E,   /* inner bright glow */  /* mid glow - slightly lighter */
-    0 0 10px #FF6666,  /* outer soft glow */
-    0 0 20px #B20600  /* very diffused glow */
+
+text-shadow: 
+  0 0 2px #FF1E1E,
+  0 0 10px #FF6666,
+  0 0 20px #B20600;
 }
 
 .name3:hover{
 transform: scale(1.2);
 color:red;
-
 }
 
-
-
+/* TWINKLES */
 .twinkle-container {
   position: fixed;
   top: 0;
@@ -162,17 +172,17 @@ color:red;
   z-index: 1;
 }
 
-
 .twinkle-container span{
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: #53CBF3;
-    border-radius: 0;
-    transform: rotate(45deg);
-    opacity: 0;
-    animation: twinkle 3s infinite ease-in-out;
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: #53CBF3;
+  border-radius: 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  animation: twinkle 3s infinite ease-in-out;
 }
+
 @keyframes twinkle {
   0%, 100% { 
     opacity: 0; 
@@ -184,26 +194,47 @@ color:red;
   }
 }
 
-/* Position, animation-delay, and scale variations for each star */
-.twinkle-container span:nth-child(1)  { top: 5%;  left: 10%;  animation-delay: 0s;   transform: scaleY(0.8) rotate(45deg); }
-.twinkle-container span:nth-child(2)  { top: 15%; left: 30%;  animation-delay: 0.5s; transform: scaleY(1)   rotate(45deg); }
-.twinkle-container span:nth-child(3)  { top: 25%; left: 50%;  animation-delay: 1s;   transform: scaleY(0.7) rotate(45deg); }
-.twinkle-container span:nth-child(4)  { top: 35%; left: 20%;  animation-delay: 1.2s; transform: scaleY(1.1) rotate(45deg); }
-.twinkle-container span:nth-child(5)  { top: 45%; left: 70%;  animation-delay: 1.5s; transform: scaleY(0.9) rotate(45deg); }
-.twinkle-container span:nth-child(6)  { top: 55%; left: 40%;  animation-delay: 1.8s; transform: scaleY(1)   rotate(45deg); }
-.twinkle-container span:nth-child(7)  { top: 65%; left: 60%;  animation-delay: 2s;   transform: scaleY(0.8) rotate(45deg); }
-.twinkle-container span:nth-child(8)  { top: 10%; left: 80%;  animation-delay: 2.3s; transform: scaleY(1.2) rotate(45deg); }
-.twinkle-container span:nth-child(9)  { top: 20%; left: 5%;   animation-delay: 2.5s; transform: scaleY(0.7) rotate(45deg); }
-.twinkle-container span:nth-child(10) { top: 30%; left: 90%;  animation-delay: 2.8s; transform: scaleY(1)   rotate(45deg); }
-.twinkle-container span:nth-child(11) { top: 40%; left: 15%;  animation-delay: 3s;   transform: scaleY(0.9) rotate(45deg); }
-.twinkle-container span:nth-child(12) { top: 50%; left: 35%;  animation-delay: 3.2s; transform: scaleY(1)   rotate(45deg); }
-.twinkle-container span:nth-child(13) { top: 60%; left: 55%;  animation-delay: 3.5s; transform: scaleY(0.8) rotate(45deg); }
-.twinkle-container span:nth-child(14) { top: 70%; left: 75%;  animation-delay: 3.8s; transform: scaleY(1.1) rotate(45deg); }
-.twinkle-container span:nth-child(15) { top: 80%; left: 25%;  animation-delay: 4s;   transform: scaleY(0.9) rotate(45deg); }
-.twinkle-container span:nth-child(16) { top: 85%; left: 45%;  animation-delay: 4.3s; transform: scaleY(1)   rotate(45deg); }
-.twinkle-container span:nth-child(17) { top: 15%; left: 65%;  animation-delay: 4.5s; transform: scaleY(0.7) rotate(45deg); }
-.twinkle-container span:nth-child(18) { top: 25%; left: 85%;  animation-delay: 4.8s; transform: scaleY(1)   rotate(45deg); }
-.twinkle-container span:nth-child(19) { top: 35%; left: 35%;  animation-delay: 5s;   transform: scaleY(0.8) rotate(45deg); }
-.twinkle-container span:nth-child(20) { top: 45%; left: 55%;  animation-delay: 5.3s; transform: scaleY(1.2) rotate(45deg); }
-.twinkle-container span:nth-child(21) { top: 60%; left: 75%;  animation-delay: 5.5s; transform: scaleY(1)   rotate(45deg); }
+/* STAR POSITIONS */
+.twinkle-container span:nth-child(1)  { top: 5%;  left: 10%;  animation-delay: 0s; }
+.twinkle-container span:nth-child(2)  { top: 15%; left: 30%;  animation-delay: 0.5s; }
+.twinkle-container span:nth-child(3)  { top: 25%; left: 50%;  animation-delay: 1s; }
+.twinkle-container span:nth-child(4)  { top: 35%; left: 20%;  animation-delay: 1.2s; }
+.twinkle-container span:nth-child(5)  { top: 45%; left: 70%;  animation-delay: 1.5s; }
+.twinkle-container span:nth-child(6)  { top: 55%; left: 40%;  animation-delay: 1.8s; }
+.twinkle-container span:nth-child(7)  { top: 65%; left: 60%;  animation-delay: 2s; }
+.twinkle-container span:nth-child(8)  { top: 10%; left: 80%;  animation-delay: 2.3s; }
+.twinkle-container span:nth-child(9)  { top: 20%; left: 5%;   animation-delay: 2.5s; }
+.twinkle-container span:nth-child(10) { top: 30%; left: 90%;  animation-delay: 2.8s; }
+.twinkle-container span:nth-child(11) { top: 40%; left: 15%;  animation-delay: 3s; }
+.twinkle-container span:nth-child(12) { top: 50%; left: 35%;  animation-delay: 3.2s; }
+.twinkle-container span:nth-child(13) { top: 60%; left: 55%;  animation-delay: 3.5s; }
+.twinkle-container span:nth-child(14) { top: 70%; left: 75%;  animation-delay: 3.8s; }
+.twinkle-container span:nth-child(15) { top: 80%; left: 25%;  animation-delay: 4s; }
+.twinkle-container span:nth-child(16) { top: 85%; left: 45%;  animation-delay: 4.3s; }
+.twinkle-container span:nth-child(17) { top: 15%; left: 65%;  animation-delay: 4.5s; }
+.twinkle-container span:nth-child(18) { top: 25%; left: 85%;  animation-delay: 4.8s; }
+.twinkle-container span:nth-child(19) { top: 35%; left: 35%;  animation-delay: 5s; }
+.twinkle-container span:nth-child(20) { top: 45%; left: 55%;  animation-delay: 5.3s; }
+.twinkle-container span:nth-child(21) { top: 60%; left: 75%;  animation-delay: 5.5s; }
 
+/* COVER */
+.cover {
+  position: relative;
+}
+
+/* BACKGROUND IMAGE FIX */
+.constellation {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  object-fit: cover;
+
+  z-index: 0;
+  opacity: 0.5;
+
+  pointer-events: none;
+}
