@@ -109,10 +109,7 @@ gap:30px;
   animation: shimmerFlow 14s linear infinite;
 }
 
-.name1:hover{
-transform: scale(1.2);
-color: #FFD700;
-}
+
 
 @keyframes shimmerFlow {
   from {background-position:0% center;}
@@ -135,16 +132,13 @@ position: relative;
 z-index: 3;
 }
 
-.name2:hover{
-transform: scale(1.2);
-color:#F3F8FF;
-}
+
 
 .name3{
 font-family:roman;
 font-weight:400;
 text-align: center;
-font-size:40px;
+font-size:38px;
 color:#C00707;
 position: relative;
 z-index: 3;
@@ -156,10 +150,6 @@ text-shadow:
   0 0 20px #B20600;
 }
 
-.name3:hover{
-transform: scale(1.2);
-color:red;
-}
 
 /* TWINKLES */
 .twinkle-container {
