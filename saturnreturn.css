@@ -421,3 +421,10 @@ a[href^="tel"]:hover,
 a[href^="tel"]:active {
   color: white !important;
 }
+
+@media screen and (max-width: 600px) {
+  .video-container {
+    width: 92%;        /* slightly narrower than full width */
+    margin: 20px auto; /* keeps it centered */
+  }
+}
