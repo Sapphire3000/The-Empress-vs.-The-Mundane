@@ -1,0 +1,315 @@
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+margin:0;
+padding:0;
+background:#010210;
+font-family: "Playfair Display", serif;
+overflow-x: hidden;
+}
+
+/* =========================
+   HEADLINE
+========================= */
+
+h1{
+font-family: "Beau Rivage", cursive;
+color: #FFD786;
+text-align:center;
+font-size:75px;
+margin-top: 30px;
+padding: 0 10px;
+}
+
+p{
+color:white;
+text-align: center;
+padding: 0 15px;
+line-height: 1.5;
+}
+
+/* =========================
+   FORM CONTAINER (UPGRADED)
+========================= */
+
+form{
+color:#FFD786;
+display:flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+max-width: 520px;
+margin: 40px auto;
+padding: 30px;
+
+position: relative;
+z-index: 2;
+
+/* PREMIUM CARD UPGRADE */
+background: rgba(1,2,16,0.85);
+border: 1px solid rgba(255,215,134,0.25);
+border-radius: 15px;
+backdrop-filter: blur(6px);
+box-shadow: 0 0 25px rgba(255,215,134,0.08);
+}
+
+/* LABELS */
+label{
+align-self: flex-start;
+margin-top: 14px;
+font-size: 14px;
+display: flex;
+align-items: center;
+gap: 8px;
+}
+
+/* INPUTS */
+input[type="text"],
+input[type="email"]{
+width: 100%;
+max-width: 400px;
+padding: 12px;
+margin-top: 8px;
+margin-bottom: 15px;
+
+border-radius: 10px;
+border: 1px solid #FFD786;
+
+background: rgba(1,2,16,0.6);
+color: #FFD786;
+
+outline: none;
+font-size: 16px;
+}
+
+/* PLACEHOLDER */
+input::placeholder{
+color: rgba(255,215,134,0.6);
+}
+
+/* DISCLAIMER TEXT */
+form p{
+font-size: 13px;
+line-height: 1.5;
+color: #FFD786;
+text-align: center;
+margin-top: 20px;
+padding: 10px;
+}
+
+/* CHECKBOX */
+input[type="checkbox"]{
+transform: scale(1.1);
+margin-right: 10px;
+}
+
+/* BUTTON */
+button{
+margin-top: 20px;
+width: 100%;
+max-width: 400px;
+padding: 16px;
+
+border-radius: 12px;
+border: none;
+
+background: #FFD786;
+color: #010210;
+
+font-size: 16px;
+font-weight: bold;
+
+cursor: pointer;
+transition: 0.2s ease;
+
+touch-action: manipulation;
+}
+
+/* BUTTON PRESS EFFECT */
+button:active{
+transform: scale(0.98);
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+li a{
+text-align: center;
+text-decoration: none;
+color:#010210;
+font-weight: bold;
+}
+
+ul{
+justify-content:center;
+display:flex;
+list-style: none;
+flex-direction:row;
+text-align:center;
+padding:0;
+margin:0;
+font-size: 18px;
+font-family: playfair display;
+gap:30px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color:#010210;
+  font-size: 15px;
+  position: relative;
+  z-index: 3;
+}
+
+.nav-links {
+  display: flex;
+  gap: 4rem;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  background-color:#010210;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: gold;
+  font-size: 1.15rem;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #C40C0C;
+  margin: 4px 0;
+}
+
+/* =========================
+   MOBILE NAV
+========================= */
+
+@media screen and (max-width: 768px) {
+
+h1{
+font-size: 42px;
+}
+
+form{
+width: 92%;
+padding: 18px;
+}
+
+input[type="text"],
+input[type="email"],
+button{
+max-width: 100%;
+}
+
+label{
+font-size: 13px;
+margin-left: 0;
+}
+
+form p{
+font-size: 12px;
+line-height: 1.4;
+}
+
+.hamburger { display: flex; }
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  top: 60px;
+  right: 0;
+  background-color: #010210;
+  padding: 1rem;
+}
+
+.nav-links.nav-active { display: flex; }
+
+}
+
+/* =========================
+   TWINKLE STARS
+========================= */
+
+.twinkle-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.twinkle-container span{
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: #53CBF3;
+  border-radius: 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  animation: twinkle 3s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%, 100% { 
+    opacity: 0; 
+    transform: rotate(45deg) scale(0.5); 
+  }
+  50% { 
+    opacity: 1; 
+    transform: rotate(45deg) scale(1); 
+  }
+}
+
+/* STAR POSITIONS (unchanged) */
+.twinkle-container span:nth-child(1)  { top: 5%;  left: 10%;  animation-delay: 0s; }
+.twinkle-container span:nth-child(2)  { top: 15%; left: 30%;  animation-delay: 0.5s; }
+.twinkle-container span:nth-child(3)  { top: 25%; left: 50%;  animation-delay: 1s; }
+.twinkle-container span:nth-child(4)  { top: 35%; left: 20%;  animation-delay: 1.2s; }
+.twinkle-container span:nth-child(5)  { top: 45%; left: 70%;  animation-delay: 1.5s; }
+.twinkle-container span:nth-child(6)  { top: 55%; left: 40%;  animation-delay: 1.8s; }
+.twinkle-container span:nth-child(7)  { top: 65%; left: 60%;  animation-delay: 2s; }
+.twinkle-container span:nth-child(8)  { top: 10%; left: 80%;  animation-delay: 2.3s; }
+.twinkle-container span:nth-child(9)  { top: 20%; left: 5%;   animation-delay: 2.5s; }
+.twinkle-container span:nth-child(10) { top: 30%; left: 90%;  animation-delay: 2.8s; }
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #FFD786;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer a { color: #FFD786; }
