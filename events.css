@@ -191,3 +191,47 @@ margin-top: auto;
 color: #FFD786;
 }
 
+.twinkle-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.twinkle-container span{
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: #53CBF3;
+  border-radius: 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  animation: twinkle 3s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%, 100% { 
+    opacity: 0; 
+    transform: rotate(45deg) scale(0.5); 
+  }
+  50% { 
+    opacity: 1; 
+    transform: rotate(45deg) scale(1); 
+  }
+}
+
+/* STAR POSITIONS (unchanged) */
+.twinkle-container span:nth-child(1)  { top: 5%;  left: 10%;  animation-delay: 0s; }
+.twinkle-container span:nth-child(2)  { top: 15%; left: 30%;  animation-delay: 0.5s; }
+.twinkle-container span:nth-child(3)  { top: 25%; left: 50%;  animation-delay: 1s; }
+.twinkle-container span:nth-child(4)  { top: 35%; left: 20%;  animation-delay: 1.2s; }
+.twinkle-container span:nth-child(5)  { top: 45%; left: 70%;  animation-delay: 1.5s; }
+.twinkle-container span:nth-child(6)  { top: 55%; left: 40%;  animation-delay: 1.8s; }
+.twinkle-container span:nth-child(7)  { top: 65%; left: 60%;  animation-delay: 2s; }
+.twinkle-container span:nth-child(8)  { top: 10%; left: 80%;  animation-delay: 2.3s; }
+.twinkle-container span:nth-child(9)  { top: 20%; left: 5%;   animation-delay: 2.5s; }
+.twinkle-container span:nth-child(10) { top: 30%; left: 90%;  animation-delay: 2.8s; }
+
